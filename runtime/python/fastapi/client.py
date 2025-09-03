@@ -63,9 +63,9 @@ if __name__ == "__main__":
                         default='0.0.0.0')
     parser.add_argument('--port',
                         type=int,
-                        default='50000')
+                        default='5000')
     parser.add_argument('--mode',
-                        default='sft',
+                        default='instruct',
                         choices=['sft', 'zero_shot', 'cross_lingual', 'instruct'],
                         help='request mode')
     parser.add_argument('--tts_text',
@@ -73,13 +73,13 @@ if __name__ == "__main__":
                         default='你好，我是通义千问语音合成大模型，请问有什么可以帮您的吗？')
     parser.add_argument('--spk_id',
                         type=str,
-                        default='中文女')
+                        default='粤语女')
     parser.add_argument('--prompt_text',
                         type=str,
-                        default='希望你以后能够做的比我还好呦。')
+                        default='你失敗咗點算啊？你而家安安穩穩，點解要咁樣做呢？')
     parser.add_argument('--prompt_wav',
                         type=str,
-                        default='../../../asset/zero_shot_prompt.wav')
+                        default='../../../asset/Ricky-Wong-3-Mins.wav_0006003840_0006134080.wav')
     parser.add_argument('--instruct_text',
                         type=str,
                         default='Theo \'Crimson\', is a fiery, passionate rebel leader. \

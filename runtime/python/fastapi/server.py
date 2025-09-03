@@ -85,10 +85,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--port',
                         type=int,
-                        default=50000)
+                        default=5000)
     parser.add_argument('--model_dir',
                         type=str,
-                        default='iic/CosyVoice-300M',
+                        default='/models/CosyVoice2-0.5B',
                         help='local path or modelscope repo id')
     args = parser.parse_args()
     try:
