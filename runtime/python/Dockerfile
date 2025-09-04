@@ -1,5 +1,12 @@
-FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
-ENV DEBIAN_FRONTEND=noninteractive
+FROM nvidia/cuda:11.8.0-runtime-ubuntu20.04
+
+# 设置 CUDA 环境变量
+ENV CUDA_HOME=/usr/local/cuda
+ENV PATH=${CUDA_HOME}/bin:${PATH}
+ENV LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+
+# FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
+# ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /app
 COPY . /app
