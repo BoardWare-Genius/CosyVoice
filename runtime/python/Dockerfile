@@ -18,5 +18,5 @@ RUN git lfs install
 # RUN git clone --recursive https://github.com/FunAudioLLM/CosyVoice.git
 RUN git submodule update --init --recursive
 # here we use python==3.10 because we cannot find an image which have both python3.8 and torch2.0.1-cu118 installed
-RUN pip3 install -r requirements.txt
-CMD ["sh", "-c", "cd runtime/python/fastapi && python3 server.py --port 5000 --model_dir /models/CosyVoice-300M-Instruct"]
+RUN pip install -r requirements.txt
+CMD ["sh", "-c", "cd runtime/python/fastapi && python server.py --port 5000 --model_dir /models/CosyVoice-300M-Instruct"]
